@@ -4,8 +4,8 @@ from dagster import job, op, repository
 
 
 @op
-def hello():
-    logging.info("Hello from Dagster Cloud!")
+def hello(context):
+    context.log.info("Hello from Dagster Cloud!")
 
 
 @job
